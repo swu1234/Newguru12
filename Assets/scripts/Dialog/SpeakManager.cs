@@ -29,7 +29,7 @@ public class SpeakManager : MonoBehaviour
 
 
     //오브젝트 설명창, PC/NPC 이름창
-    //public string name;
+    public string name;
 
     public void Action(GameObject scanObj)
     {
