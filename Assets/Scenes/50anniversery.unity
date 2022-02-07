@@ -660,6 +660,7 @@ MonoBehaviour:
   scanObject: {fileID: 0}
   isAction: 1
   talkIndex: 1000
+  name: 
 --- !u!4 &656811865
 Transform:
   m_ObjectHideFlags: 0
@@ -1063,7 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1000
-  isNPC: 0
+  isNPC: 1
 --- !u!1 &1819334118
 GameObject:
   m_ObjectHideFlags: 0

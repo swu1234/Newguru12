@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 377907326}
   - component: {fileID: 377907325}
   - component: {fileID: 377907324}
+  - component: {fileID: 377907327}
   m_Layer: 6
   m_Name: NPC learnjejus
   m_TagString: Untagged
@@ -389,6 +390,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377907327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377907323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df470be1cad74345a87a0ef86746410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2000
+  isNPC: 1
 --- !u!1 &504821635
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,9 +821,10 @@ MonoBehaviour:
   talkText: {fileID: 1246014724}
   NameText: {fileID: 2090478016}
   portraitImg: {fileID: 31440730}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 1
   talkIndex: 2000
+  name: 
 --- !u!4 &829291162
 Transform:
   m_ObjectHideFlags: 0
@@ -1166,9 +1182,10 @@ MonoBehaviour:
   talkText: {fileID: 1246014724}
   NameText: {fileID: 2090478016}
   portraitImg: {fileID: 31440730}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 2001
+  name: 
 --- !u!61 &2038405215
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -190,9 +190,10 @@ MonoBehaviour:
   talkText: {fileID: 1880959744}
   NameText: {fileID: 546004560}
   portraitImg: {fileID: 390155699}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 3000
+  name: 
 --- !u!61 &203613968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -425,9 +426,10 @@ MonoBehaviour:
   talkText: {fileID: 1880959744}
   NameText: {fileID: 546004560}
   portraitImg: {fileID: 390155699}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 3001
+  name: 
 --- !u!61 &409325086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -755,9 +757,10 @@ MonoBehaviour:
   talkText: {fileID: 1880959744}
   NameText: {fileID: 546004560}
   portraitImg: {fileID: 390155699}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 3000
+  name: 
 --- !u!4 &772184857
 Transform:
   m_ObjectHideFlags: 0
@@ -1138,6 +1141,7 @@ GameObject:
   - component: {fileID: 1349185515}
   - component: {fileID: 1349185514}
   - component: {fileID: 1349185513}
+  - component: {fileID: 1349185516}
   m_Layer: 6
   m_Name: NPC library
   m_TagString: Untagged
@@ -1236,6 +1240,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1349185516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349185512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df470be1cad74345a87a0ef86746410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3000
+  isNPC: 1
 --- !u!1 &1593737145
 GameObject:
   m_ObjectHideFlags: 0

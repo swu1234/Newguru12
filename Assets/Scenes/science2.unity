@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 346065336}
   - component: {fileID: 346065335}
   - component: {fileID: 346065334}
+  - component: {fileID: 346065337}
   m_Layer: 6
   m_Name: NPC science2
   m_TagString: Untagged
@@ -302,6 +303,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &346065337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346065333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df470be1cad74345a87a0ef86746410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4000
+  isNPC: 1
 --- !u!1 &380065064
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,9 +431,10 @@ MonoBehaviour:
   talkText: {fileID: 0}
   NameText: {fileID: 0}
   portraitImg: {fileID: 0}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 4001
+  name: 
 --- !u!61 &463948264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1060,9 +1076,10 @@ MonoBehaviour:
   talkText: {fileID: 646861802}
   NameText: {fileID: 380065067}
   portraitImg: {fileID: 1424969296}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 4000
+  name: 
 --- !u!4 &1480874228
 Transform:
   m_ObjectHideFlags: 0

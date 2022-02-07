@@ -319,9 +319,10 @@ MonoBehaviour:
   talkText: {fileID: 0}
   NameText: {fileID: 0}
   portraitImg: {fileID: 0}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 5001
+  name: 
 --- !u!61 &240416447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -500,6 +501,7 @@ GameObject:
   - component: {fileID: 934780883}
   - component: {fileID: 934780882}
   - component: {fileID: 934780881}
+  - component: {fileID: 934780884}
   m_Layer: 6
   m_Name: NPC beforeending
   m_TagString: Untagged
@@ -598,6 +600,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934780884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934780880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df470be1cad74345a87a0ef86746410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5001
+  isNPC: 1
 --- !u!1 &958044914
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +751,7 @@ GameObject:
   - component: {fileID: 1146310529}
   - component: {fileID: 1146310528}
   - component: {fileID: 1146310530}
+  - component: {fileID: 1146310531}
   m_Layer: 6
   m_Name: "\uC6B0\uCE58\uAF2C\uB9AC"
   m_TagString: Untagged
@@ -833,6 +850,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 8}
   m_EdgeRadius: 0
+--- !u!114 &1146310531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146310527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df470be1cad74345a87a0ef86746410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5000
+  isNPC: 1
 --- !u!1 &1393657089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,9 +1375,10 @@ MonoBehaviour:
   talkText: {fileID: 110776943}
   NameText: {fileID: 1876198357}
   portraitImg: {fileID: 2116988061}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 5002
+  name: 
 --- !u!61 &1917007929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1422,9 +1454,10 @@ MonoBehaviour:
   talkText: {fileID: 0}
   NameText: {fileID: 0}
   portraitImg: {fileID: 0}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 5000
+  name: 
 --- !u!61 &2003849683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1499,9 +1532,10 @@ MonoBehaviour:
   talkText: {fileID: 110776943}
   NameText: {fileID: 1876198357}
   portraitImg: {fileID: 2116988061}
-  scanObj: {fileID: 0}
+  scanObject: {fileID: 0}
   isAction: 0
   talkIndex: 5000
+  name: 
 --- !u!4 &2115858164
 Transform:
   m_ObjectHideFlags: 0

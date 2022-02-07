@@ -167,6 +167,7 @@ public class MovingObject : MonoBehaviour
 
         //Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
+            //Debug.Log("This is : " + scanObject.name);
             manager.Action(scanObject);
 
     }
