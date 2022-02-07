@@ -13,7 +13,7 @@ public class SpeakManager : MonoBehaviour
     public Text talkText;
     public Text NameText;
     public Image portraitImg;
-    public GameObject scanObj;
+    public GameObject scanObject;
     public bool isAction; //대화창 활성화 상태
     public int talkIndex;
 
@@ -33,6 +33,10 @@ public class SpeakManager : MonoBehaviour
 
     public void Action(GameObject scanObj)
     {
+        /*
+        scanObject = scanObj;
+        talkText.text = "이것의 이름은" + scanObject.name + "이라고 한다.";
+
         if (isAction) // 실행중 아닐때 ->대화창 없애기 
         {
             isAction = false;
@@ -40,14 +44,13 @@ public class SpeakManager : MonoBehaviour
         else //실행중 ->대화창 띄우기 
         {
             isAction = true;
-            /*scanObject = scanObj;
-
-            scanObject = scanObj;
-            name = scanObject.name;
-            ObjData objdata = scanObject.GetComponent<Objdata>();  //TalkText.text = "이것은 "+scanObject.name+"이다."
-            Talk(objData.id, objData.isNpc);
             */
-        }
+
+        scanObject = scanObj;
+        name = scanObject.name;
+        Objdata objData = scanObject.GetComponent<Objdata>(); 
+        //TalkText.text = "이것은 "+scanObject.name+"이다."
+        Talk(objData.id, objData.isNPC);
 
         talkPanel.SetActive(isAction); //대화창 활성화 상태에 따라 대화창 활성화 변경
     }

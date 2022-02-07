@@ -6,5 +6,5 @@ using UnityEngine.UI;
 public class Objdata : MonoBehaviour
 {
     public int id;
-    public bool isNpc;
+    public bool isNPC;
 }
