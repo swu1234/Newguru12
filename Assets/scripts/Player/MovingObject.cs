@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,27 +8,27 @@ public class MovingObject : MonoBehaviour
 
     static public MovingObject instance;
 
-    public string currentMapName; // transfermap ½ºÅ©¸³Æ®ÀÇ transfermapname º¯¼ö°ª ÀúÀå
-    //public string currentSceneName; //Ãß°¡ÇÑ º¯¼ö, scenenameÀ» ÁöÁ¤ÇÑ´Ù.
+    public string currentMapName; // transfermap ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ transfermapname ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    //public string currentSceneName; //ï¿½ß°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, scenenameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 
     private BoxCollider2D boxCollider;
     public LayerMask layerMask;
 
-    //public AudioClip walkSound_1; // ÇÃ·¹ÀÌ¾î °È±â »ç¿îµåÆÄÀÏ ÀÌ¸§
+    //public AudioClip walkSound_1; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½È±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
     //public AudioClip walkSound_2;
 
-    //private AudioSource audioSource; // »ç¿îµå ÇÃ·¹ÀÌ¾î
+    //private AudioSource audioSource; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½
 
-    public float speed; // ÇÃ·¹ÀÌ¾î ±âº» ½ºÇÇµå
+    public float speed; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½âº» ï¿½ï¿½ï¿½Çµï¿½
 
-    private Vector3 vector; // ÇÃ·¹ÀÌ¾î ÀÌµ¿
+    private Vector3 vector; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Ìµï¿½
 
-    public float runSpeed; // ÇÃ·¹ÀÌ¾î ´Þ¸± ¶§ ½ºÇÇµå
-    private float applyRunSpeed; // ´Þ¸®±â Àû¿ë
+    public float runSpeed; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Þ¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Çµï¿½
+    private float applyRunSpeed; // ï¿½Þ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private bool applyRunFlag = false;
 
-    public int walkCount; // 1Ä­¾¿ °È±â À§ÇÑ ±â´É 
-    private int currentWalkCount; // n ÇÈ¼¿¸¸Å­ ÀÌµ¿½ÃÅ³ °ÍÀÎ°¡ (ex. 2.4 * 20 = 48 >> currentwalkcount´Â 20ÀÌ´Ù.)
+    public int walkCount; // 1Ä­ï¿½ï¿½ ï¿½È±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 
+    private int currentWalkCount; // n ï¿½È¼ï¿½ï¿½ï¿½Å­ ï¿½Ìµï¿½ï¿½ï¿½Å³ ï¿½ï¿½ï¿½Î°ï¿½ (ex. 2.4 * 20 = 48 >> currentwalkcountï¿½ï¿½ 20ï¿½Ì´ï¿½.)
 
     private bool canMove = true;
 
@@ -94,11 +94,11 @@ public class MovingObject : MonoBehaviour
             animator.SetFloat("DirY", vector.y);
 
             RaycastHit2D hit;
-            Vector2 start = transform.position; // Ä³¸¯ÅÍÀÇ ÇöÀç À§Ä¡ °ª
-            Vector2 end = start + new Vector2(vector.x * speed * walkCount, vector.y * speed * walkCount); // Ä³¸¯ÅÍ°¡ ÀÌµ¿ÇÏ°íÀÚ ÇÏ´Â À§Ä¡ °ª
+            Vector2 start = transform.position; // Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½
+            Vector2 end = start + new Vector2(vector.x * speed * walkCount, vector.y * speed * walkCount); // Ä³ï¿½ï¿½ï¿½Í°ï¿½ ï¿½Ìµï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½
 
             boxCollider.enabled = false;
-            hit = Physics2D.Linecast(start, end, layerMask); // start->end·Î ·¹ÀÌÀú¸¦ ½úÀ» ¶§ °É¸®´Â °Ô ¾ø´Ù¸é null, °É¸®´Â °Ô ÀÖ´Ù¸é ¹æÇØ¹°·Î ÀÎ½Ä
+            hit = Physics2D.Linecast(start, end, layerMask); // start->endï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½É¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½ null, ï¿½É¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´Ù¸ï¿½ ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½ ï¿½Î½ï¿½
             boxCollider.enabled = true;
 
             if (hit.transform != null)
@@ -174,7 +174,7 @@ public class MovingObject : MonoBehaviour
     void FixedUpdate()
     {
         //Ray
-        Debug.DrawRay(rigid.position, vector * 0.7f, new Color(0, 1, 0));
+        Debug.DrawRay(rigid.position, vector * 0.7f, new Color(0,1,0));
         //RayCastHit2D rayHit = Physics2D.Raycast(rigid.position, vector, 0.7f );
     }
 }

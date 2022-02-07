@@ -13,7 +13,7 @@ public class SpeakManager : MonoBehaviour
     public Text talkText;
     public Text NameText;
     public Image portraitImg;
-    public GameObject scanObject;
+    public GameObject scanObject; 
     public bool isAction; //대화창 활성화 상태
     public int talkIndex;
 
