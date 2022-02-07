@@ -8,4 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/50anniversery.unity
+    guid: da2c97f4bf6094b4a991d0208e87087c
+  - enabled: 1
+    path: Assets/Scenes/beforeending.unity
+    guid: c43aa64bed476e94f82f1ccce6f766d0
+  - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: 4e8ca102e7d64cd4c9c70d2937f9cf53
+  - enabled: 1
+    path: Assets/Scenes/ending.unity
+    guid: 12b81528b37c711499687eb6f4668bfa
+  - enabled: 1
+    path: Assets/Scenes/learnjejus.unity
+    guid: 9e986ded8bc86ee458e4e10e9b3b0954
+  - enabled: 1
+    path: Assets/Scenes/library.unity
+    guid: bcfa8802a5369fe48bae9075c96d97c5
+  - enabled: 1
+    path: Assets/Scenes/science2.unity
+    guid: ad9f450a7c6279947ac2c28268d5f1ea
   m_configObjects: {}

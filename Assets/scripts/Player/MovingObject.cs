@@ -9,14 +9,15 @@ public class MovingObject : MonoBehaviour
     static public MovingObject instance;
 
     public string currentMapName; // transfermap 스크립트의 transfermapname 변수값 저장
+    //public string currentSceneName; //추가한 변수, scenename을 지정한다.
 
     private BoxCollider2D boxCollider;
     public LayerMask layerMask;
 
-    public AudioClip walkSound_1; // 플레이어 걷기 사운드파일 이름
-    public AudioClip walkSound_2;
+    //public AudioClip walkSound_1; // 플레이어 걷기 사운드파일 이름
+    //public AudioClip walkSound_2;
 
-    private AudioSource audioSource; // 사운드 플레이어
+    //private AudioSource audioSource; // 사운드 플레이어
 
     public float speed; // 플레이어 기본 스피드
     
@@ -54,7 +55,6 @@ public class MovingObject : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
             boxCollider = GetComponent<BoxCollider2D>();
-            audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
             instance = this;
         }
@@ -105,7 +105,7 @@ public class MovingObject : MonoBehaviour
 
             while (currentWalkCount < walkCount)
             {
-                if (currentMapName == "start")
+                /*if (currentMapName == "start")
                 {
                     audioSource.clip = walkSound_1;
                     audioSource.Play();
@@ -115,7 +115,7 @@ public class MovingObject : MonoBehaviour
                     audioSource.clip = walkSound_2;
                     audioSource.Play();
                 }
-
+                */
                 if (vector.x != 0)
                 {
                     transform.Translate(vector.x * (speed + applyRunSpeed), 0, 0);
@@ -149,9 +149,9 @@ public class MovingObject : MonoBehaviour
             }
         }
 
-     //Scan Object
+     /*Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
-            manager.Action(scanObject);
-
+            Speakmanager.Action(scanObject);
+     */
     }
 }

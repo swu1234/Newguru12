@@ -13,7 +13,7 @@ public class SpeakManager : MonoBehaviour
     public Text talkText;
     public Text NameText;
     public Image portraitImg;
-    public GameObject scanObject;
+    public GameObject scanObj;
     public bool isAction; //대화창 활성화 상태
     public int talkIndex;
 
@@ -26,9 +26,11 @@ public class SpeakManager : MonoBehaviour
     {
         
     }
+    
 
     //오브젝트 설명창, PC/NPC 이름창
-    public string name;
+    //public string name;
+
     public void Action(GameObject scanObj)
     {
         if (isAction) // 실행중 아닐때 ->대화창 없애기 
@@ -38,19 +40,20 @@ public class SpeakManager : MonoBehaviour
         else //실행중 ->대화창 띄우기 
         {
             isAction = true;
-            scanObject = scanObj;
+            /*scanObject = scanObj;
 
             scanObject = scanObj;
             name = scanObject.name;
             ObjData objdata = scanObject.GetComponent<Objdata>();  //TalkText.text = "이것은 "+scanObject.name+"이다."
             Talk(objData.id, objData.isNpc);
+            */
         }
 
         talkPanel.SetActive(isAction); //대화창 활성화 상태에 따라 대화창 활성화 변경
     }
+    
 
-
-    void Talk(int id, bool isNpc)
+    void Talk(int id, bool isNPC)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
@@ -63,8 +66,8 @@ public class SpeakManager : MonoBehaviour
 
         if (isNPC)
         {
-            TalkText.text = talkData.Split(':')[0]; //구분자로 문장을 나눠줌  0: 대사 1:portraitIndex
-            portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
+            talkText.text = talkData.Split(':')[0]; //구분자로 문장을 나눠줌  0: 대사 1:portraitIndex
+            //portraitImg.sprite = GetPortrait(id, int.Parse(talkData.Split(':')[1]));
             portraitImg.color = new Color(1, 1, 1, 1);
 
             if (int.Parse(talkData.Split(':')[1]) == 1)

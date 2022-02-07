@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eding : MonoBehaviour
+public class Ending : MonoBehaviour
 {
-    public Gameobject go;
+    public GameObject go;
 
-    private void OnTriggerStay2D(Collide2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
 
 
