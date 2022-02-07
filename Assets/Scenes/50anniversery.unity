@@ -657,6 +657,7 @@ MonoBehaviour:
   talkText: {fileID: 141662877}
   NameText: {fileID: 426226612}
   portraitImg: {fileID: 977276556}
+  scanObj: {fileID: 0}
   isAction: 1
   talkIndex: 1000
 --- !u!4 &656811865
@@ -977,7 +978,7 @@ GameObject:
   - component: {fileID: 1584708980}
   - component: {fileID: 1584708979}
   - component: {fileID: 1584708981}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: NPC 50anniversery
   m_TagString: Untagged
   m_Icon: {fileID: 0}

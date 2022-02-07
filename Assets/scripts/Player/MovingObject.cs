@@ -35,6 +35,8 @@ public class MovingObject : MonoBehaviour
     private Animator animator;
 
     public SpeakManager manager;
+    Rigidbody2D rigid;
+    GameObject scanobject;
 
     public void Move()
     {
@@ -56,12 +58,15 @@ public class MovingObject : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             boxCollider = GetComponent<BoxCollider2D>();
             animator = GetComponent<Animator>();
+            rigid = GetComponent<Rigidbody2D>();
             instance = this;
         }
         else
         {
             Destroy(this.gameObject);
         }
+
+
     }
     IEnumerator MoveCoroutine()
     {
@@ -149,9 +154,27 @@ public class MovingObject : MonoBehaviour
             }
         }
 
-     /*Scan Object
+        //Direction
+        if (Input.GetKey("up")|| Input.GetKey("w"))
+            vector = Vector3.up;
+        else if (Input.GetKey("down")|| Input.GetKey("s"))
+            vector = Vector3.down;
+        else if (Input.GetKey("left") || Input.GetKey("a"))
+            vector = Vector3.left;
+        else if (Input.GetKey("right") || Input.GetKey("d"))
+            vector = Vector3.right;
+
+
+        //Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
-            Speakmanager.Action(scanObject);
-     */
+            manager.Action(scanObject);
+     
+    }
+
+    void FixedUpdate()
+    {
+        //Ray
+        Debug.DrawRay(rigid.position, vector * 0.7f, new Color(0,1,0));
+        RayCastHit2D rayHit = Physics2D.Raycast(rigid.position, vector, 0.7f );
     }
 }
