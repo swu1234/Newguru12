@@ -175,6 +175,6 @@ public class MovingObject : MonoBehaviour
     {
         //Ray
         Debug.DrawRay(rigid.position, vector * 0.7f, new Color(0,1,0));
-        RayCastHit2D rayHit = Physics2D.Raycast(rigid.position, vector, 0.7f );
+        //RayCastHit2D rayHit = Physics2D.Raycast(rigid.position, vector, 0.7f );
     }
 }
