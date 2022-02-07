@@ -36,7 +36,7 @@ public class MovingObject : MonoBehaviour
 
     public SpeakManager manager;
     Rigidbody2D rigid;
-    GameObject scanobject;
+    GameObject scanObject;
 
     public void Move()
     {
