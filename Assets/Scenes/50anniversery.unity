@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2778, y: 87.6}
+  m_AnchoredPosition: {x: -1895.9998, y: -487.4}
   m_SizeDelta: {x: 450.5084, y: 84.4703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &141662876
@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308136224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.718994, y: -6.063263, z: 1225.6674}
+  m_LocalPosition: {x: 109.91902, y: -63.563263, z: 1225.6674}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 433463397}
@@ -471,7 +471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2932, y: 162}
+  m_AnchoredPosition: {x: -2050, y: -413}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &426226611
@@ -582,7 +582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2546.9995, y: 134.00009}
+  m_AnchoredPosition: {x: -1664.9993, y: -440.9999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508586857
@@ -657,6 +657,7 @@ MonoBehaviour:
   talkText: {fileID: 141662877}
   NameText: {fileID: 426226612}
   portraitImg: {fileID: 977276556}
+  scanObj: {fileID: 0}
   isAction: 1
   talkIndex: 1000
 --- !u!4 &656811865
@@ -789,7 +790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3026, y: 168}
+  m_AnchoredPosition: {x: -2143.9998, y: -407}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1273157333
@@ -977,6 +978,7 @@ GameObject:
   - component: {fileID: 1584708980}
   - component: {fileID: 1584708979}
   - component: {fileID: 1584708981}
+  - component: {fileID: 1584708978}
   m_Layer: 6
   m_Name: NPC 50anniversery
   m_TagString: Untagged
@@ -984,6 +986,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!61 &1584708978
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584708977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.625, y: 6.25}
+    newSize: {x: 2.625, y: 6.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.625, y: 6.25}
+  m_EdgeRadius: 0
 --- !u!212 &1584708979
 SpriteRenderer:
   m_ObjectHideFlags: 0

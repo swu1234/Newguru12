@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1753634861}
   moveSpeed: 0
-  bound: {fileID: 0}
+  bound: {fileID: 1615058701}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -608,7 +608,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4582672, y: -0.45827293}
@@ -943,7 +943,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.45828247, y: 0.45827103}

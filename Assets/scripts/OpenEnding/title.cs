@@ -21,10 +21,10 @@ public class title : MonoBehaviour
     public void StartGame()
     {
 
-        StartCoroutine(GamestartCoroutine());
+        StartCoroutine(GameStartCoroutine());
     }
 
-    IEnumerator GamestartCoroutine()
+    IEnumerator GameStartCoroutine()
     {
         yield return new WaitForSeconds(2f);
         Color color = thePlayer.GetComponent<SpriteRenderer>().color;

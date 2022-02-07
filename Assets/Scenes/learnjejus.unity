@@ -308,7 +308,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05569029, y: 0.3062973}
@@ -806,6 +806,7 @@ MonoBehaviour:
   talkText: {fileID: 1246014724}
   NameText: {fileID: 2090478016}
   portraitImg: {fileID: 31440730}
+  scanObj: {fileID: 0}
   isAction: 1
   talkIndex: 2000
 --- !u!4 &829291162
@@ -877,7 +878,6 @@ GameObject:
   - component: {fileID: 1153650241}
   - component: {fileID: 1153650240}
   - component: {fileID: 1153650239}
-  - component: {fileID: 1153650242}
   m_Layer: 5
   m_Name: Test
   m_TagString: Untagged
@@ -945,24 +945,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1153650242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153650238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b43131e95ce3a499ae2cc76160fb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go: {fileID: 0}
-  QuizText: {fileID: 0}
-  AnswerText: []
-  AnswerPanel: []
-  anim: {fileID: 0}
-  quizing: 0
 --- !u!1 &1246014721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1166,7 @@ MonoBehaviour:
   talkText: {fileID: 1246014724}
   NameText: {fileID: 2090478016}
   portraitImg: {fileID: 31440730}
+  scanObj: {fileID: 0}
   isAction: 0
   talkIndex: 2001
 --- !u!61 &2038405215

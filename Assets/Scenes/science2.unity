@@ -204,8 +204,8 @@ GameObject:
   - component: {fileID: 346065336}
   - component: {fileID: 346065335}
   - component: {fileID: 346065334}
-  m_Layer: 8
-  m_Name: NPC library
+  m_Layer: 6
+  m_Name: NPC science2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05569029, y: 0.3062973}
@@ -416,6 +416,7 @@ MonoBehaviour:
   talkText: {fileID: 0}
   NameText: {fileID: 0}
   portraitImg: {fileID: 0}
+  scanObj: {fileID: 0}
   isAction: 0
   talkIndex: 4001
 --- !u!61 &463948264
@@ -1059,6 +1060,7 @@ MonoBehaviour:
   talkText: {fileID: 646861802}
   NameText: {fileID: 380065067}
   portraitImg: {fileID: 1424969296}
+  scanObj: {fileID: 0}
   isAction: 0
   talkIndex: 4000
 --- !u!4 &1480874228
@@ -1386,7 +1388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a15f98f87248eb54eb5e034ec8dec4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: science
+  startPoint: science2
 --- !u!61 &2130299067
 BoxCollider2D:
   m_ObjectHideFlags: 0
