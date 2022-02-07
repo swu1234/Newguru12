@@ -24,9 +24,9 @@ public class SpeakManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
-    
+
 
     //오브젝트 설명창, PC/NPC 이름창
     //public string name;
@@ -48,20 +48,20 @@ public class SpeakManager : MonoBehaviour
 
         scanObject = scanObj;
         name = scanObject.name;
-        Objdata objData = scanObject.GetComponent<Objdata>(); 
+        Objdata objData = scanObject.GetComponent<Objdata>();
         //TalkText.text = "이것은 "+scanObject.name+"이다."
         Talk(objData.id, objData.isNPC);
 
         talkPanel.SetActive(isAction); //대화창 활성화 상태에 따라 대화창 활성화 변경
     }
-    
+
 
     void Talk(int id, bool isNPC)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
         if (talkData == null) //반환된 것이 null이면 더이상 남은 대사가 없으므로 action상태변수를 false로 설정 
-        { 
+        {
             isAction = false;
             talkIndex = 0; //talk인덱스는 다음에 또 사용되므로 초기화
             return; //void에서의 return 함수 강제종료 (밑의 코드는 실행되지 않음)

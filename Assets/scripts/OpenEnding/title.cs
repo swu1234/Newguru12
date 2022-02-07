@@ -20,7 +20,6 @@ public class title : MonoBehaviour
 
     public void StartGame()
     {
-
         StartCoroutine(GameStartCoroutine());
     }
 

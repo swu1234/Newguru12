@@ -20,7 +20,7 @@ public class MovingObject : MonoBehaviour
     //private AudioSource audioSource; // 사운드 플레이어
 
     public float speed; // 플레이어 기본 스피드
-    
+
     private Vector3 vector; // 플레이어 이동
 
     public float runSpeed; // 플레이어 달릴 때 스피드
@@ -36,7 +36,7 @@ public class MovingObject : MonoBehaviour
 
     public SpeakManager manager;
     Rigidbody2D rigid;
-    GameObject scanobject;
+    GameObject scanObject;
 
     public void Move()
     {
@@ -70,7 +70,7 @@ public class MovingObject : MonoBehaviour
     }
     IEnumerator MoveCoroutine()
     {
-        while(Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") !=0)
+        while (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -85,7 +85,7 @@ public class MovingObject : MonoBehaviour
 
             vector.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), transform.position.z);
 
-            if(vector.x != 0)
+            if (vector.x != 0)
             {
                 vector.y = 0;
             }
@@ -145,7 +145,7 @@ public class MovingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canMove)
+        if (canMove)
         {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
@@ -155,9 +155,9 @@ public class MovingObject : MonoBehaviour
         }
 
         //Direction
-        if (Input.GetKey("up")|| Input.GetKey("w"))
+        if (Input.GetKey("up") || Input.GetKey("w"))
             vector = Vector3.up;
-        else if (Input.GetKey("down")|| Input.GetKey("s"))
+        else if (Input.GetKey("down") || Input.GetKey("s"))
             vector = Vector3.down;
         else if (Input.GetKey("left") || Input.GetKey("a"))
             vector = Vector3.left;
@@ -168,13 +168,13 @@ public class MovingObject : MonoBehaviour
         //Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
             manager.Action(scanObject);
-     
+
     }
 
     void FixedUpdate()
     {
         //Ray
-        Debug.DrawRay(rigid.position, vector * 0.7f, new Color(0,1,0));
-        RayCastHit2D rayHit = Physics2D.Raycast(rigid.position, vector, 0.7f );
+        Debug.DrawRay(rigid.position, vector * 0.7f, new Color(0, 1, 0));
+        //RayCastHit2D rayHit = Physics2D.Raycast(rigid.position, vector, 0.7f );
     }
 }
